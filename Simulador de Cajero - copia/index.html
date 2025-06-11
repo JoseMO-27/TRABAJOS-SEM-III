@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación Cajero Automático</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulación Cajero Automático</h1>
+
+        <div id="autenticacion" class="card">
+            <h2>Autenticación</h2>
+            <label for="documento">Número de Documento:</label>
+            <input type="text" id="documento" placeholder="Ingrese su documento">
+            <label for="banco">Seleccione su Banco:</label>
+            <select id="banco">
+                <option value="bancolombia">Bancolombia</option>
+                <option value="banco_bogota">Banco de Bogotá</option>
+                <option value="bbva">BBVA</option>
+            </select>
+            <button id="btnAutenticar" class="btn">Autenticar</button>
+            <p id="mensajeAutenticacion" class="mensaje"></p>
+        </div>
+
+        <div id="menu" class="card" style="display: none;">
+            <h2>Menú Principal</h2>
+            <div class="menu-buttons">
+                <button id="btnRetirar" class="btn">Retirar Dinero</button>
+                <button id="btnDepositar" class="btn">Depositar Dinero</button>
+                <button id="btnSaldo" class="btn">Consultar Saldo</button>
+            </div>
+            <button id="btnSalir" class="btn btn-salir">Salir</button>
+            <p id="mensajeMenu" class="mensaje"></p>
+        </div>
+
+        <div id="retiro" class="card" style="display: none;">
+            <h2>Retirar Dinero</h2>
+            <label for="cantidadRetiro">Cantidad a Retirar:</label>
+            <input type="number" id="cantidadRetiro" placeholder="Ingrese la cantidad">
+            <button id="btnConfirmarRetiro" class="btn">Confirmar Retiro</button>
+            <button id="btnVolverMenuRetiro" class="btn btn-volver">Devolver al Menú Principal</button>
+            <p id="mensajeRetiro" class="mensaje"></p>
+        </div>
+
+        <div id="deposito" class="card" style="display: none;">
+            <h2>Depositar Dinero</h2>
+            <label for="cantidadDeposito">Cantidad a Depositar:</label>
+            <input type="number" id="cantidadDeposito" placeholder="Ingrese la cantidad">
+            <button id="btnConfirmarDeposito" class="btn">Confirmar Depósito</button>
+            <button id="btnVolverMenuDeposito" class="btn btn-volver">Devolver al Menú Principal</button>
+            <p id="mensajeDeposito" class="mensaje"></p>
+        </div>
+
+        <div id="saldo" class="card" style="display: none;">
+            <h2>Saldo Actual</h2>
+            <p>Su saldo actual es: <span id="saldoActual">$0.00</span></p>
+            <button id="btnVolverMenuSaldo" class="btn btn-volver">Volver al Menú Principal</button>
+        </div>
+
+        <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+            <p id="textoMensajeExito"></p>
+        </div>
+
+    </div>
+</body>
+</html>
